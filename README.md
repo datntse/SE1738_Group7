@@ -21,7 +21,7 @@ A brief description of what this project does and who it's for
 
 ### Screen Shot
 * ERD Diagram
-![ERD Diagram](https://github.com/datntse/SE1738_Group7/tree/main/document/screenshot/ERD-Diagram-User-Role.png)
+![ERD Diagram](https://github.com/datntse/SE1738_Group7/blob/main/document/screenshot/ERD-Diagram-User-Role.png)
 
 #### Connect us via dat.nt271102@gmail.com
 
