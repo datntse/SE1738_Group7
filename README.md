@@ -8,7 +8,7 @@ A brief description of what this project does and who it's for
 * The Capstone mini project - Bird Meal Order System 
 * Document desciption about work flow and ERD Diagram.
 * Build project with ASP.NET
-* ....
+* .....
 
 ## Contribuitors
 
