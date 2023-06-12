@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Visual Studio\\BMOS\\BMOS\\BMOS.csproj",
+      "projectUniqueName": "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
       "projectName": "BMOS",
-      "projectPath": "D:\\Visual Studio\\BMOS\\BMOS\\BMOS.csproj",
+      "projectPath": "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
       "packagesPath": "C:\\Users\\datnt\\.nuget\\packages\\",
-      "outputPath": "D:\\Visual Studio\\BMOS\\BMOS\\obj\\",
+      "outputPath": "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\datnt\\AppData\\Roaming\\NuGet\\NuGet.Config",
