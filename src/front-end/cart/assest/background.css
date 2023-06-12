@@ -1,0 +1,57 @@
+
+
+.background {
+    height: 5000px;
+    width: 100%;
+    background: url("../images/v10_530.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    overflow: hidden;
+    z-index: -10;
+  }
+  .v10_531 {
+    width: 633px;
+    height: 559px;
+    background: linear-gradient(rgba(91,204,89,0.5899999737739563), rgba(255,216,12,0));
+    opacity: 1;
+    position: absolute;
+    top: 585px;
+    left: 0px;
+    border-radius: 50%;
+  }
+  .v10_532 {
+    width: 633px;
+    height: 559px;
+    background: linear-gradient(rgba(255,0,0,0.5199999809265137), rgba(255,216,12,0));
+    opacity: 1;
+    position: absolute;
+    top: 1534px;
+    left: 223px;
+    border-radius: 50%;
+  }
+  .v10_533 {
+    width: 633px;
+    height: 559px;
+    background: linear-gradient(rgba(47,255,217,0.5899999737739563), rgba(255,216,12,0));
+    opacity: 1;
+    position: absolute;
+    top: 0px;
+    left: 1407px;
+    border-radius: 50%;
+  }
+  .v10_534 {
+    width: 633px;
+    height: 559px;
+    background: linear-gradient(rgba(204,199,89,0.5899999737739563), rgba(255,216,12,0));
+    opacity: 1;
+    position: absolute;
+    top: 1180px;
+    left: 1407px;
+    border-radius: 50%;
+  }
+  

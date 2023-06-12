@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css ">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/assest/background.css">
+    <link rel="stylesheet" href="assest/resetcss.css">
+    <link rel="stylesheet" href="assest/style.css">
+    <title>CART</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div class="header">
+            <div class="container">
+                <div class="row header-search">
+                    <div class="col-2 header-logo">
+                        <img class="header-logo" src="images/Logo.png" alt="Logo">
+                    </div>
+                    <div class="col-6 header-search__form">
+                        <div class="header-search__form--input">
+                            <input class="header-search__form--input-field" type="text" placeholder="Type your keyword">
+                        </div>
+                        <div class="header-search_form--button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row header-option">
+                            <div class="col header-option-notify ">
+                                <img src="images/bell.png" alt="">
+                            </div>
+                            <div class="col header-option-cart">
+                                <img src="images/cart.png" alt="" srcset="">
+                            </div>
+                            <div class="col header-option-profile">
+                                <img src="images/user-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <div class="header-navbar">
+            <div class="container header-navbar__list">
+                <ul class="header-navbar__page-list">
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">HOME</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">ABOUT SHOP</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">PRODUCT</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">MEAL</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">BLOG</a></li>
+                </ul>
+                <div class="header-navbar__location-shop">
+                    <div class="location-shop__title">SHOP LOCATION</div>
+                    <div class="location-shop__icon">
+                        <img src="images/location-icon.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- End Header -->
+        <!-- Content -->
+        
+            <div class="cart-layout pt-3">
+                <div class="container" style="min-height: 350px">
+                <div class="row js-cart">
+                    <div class="basket cart__basket col-md-8">
+                <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix">
+                <img src="images/product-item.png" class="js-img position-absolute" alt="undefined">
+                <div class="col-12 d-flex p-0">
+                    <p class="item-title clearfix mb-2">
+                    <a href="" title="" class=" font-weight-bold">Wild bird</a>
+                    <span class=" d-block">1.5kg</span>
+                    </p>
+                    <span class="price font-weight-bold ml-auto text-right clearfix">320.000&nbsp;₫</span>
+                </div>
+                <div class="number-input d-inline-flex rounded">
+                    <button class="position-relative m-0 border-0 step-down-qty">-</button>
+                    <input class=" text-center" readonly="" min="1" name="Lines" value="2" size="2" type="number" data-variantid="85321773">
+                    <button class="position-relative m-0 border-0 step-up-qty plus">+</button>
+                </div>
+                <button class="btn btn-outline-danger remove ml-auto " title="Xoá" data-variantid="85321773">Xoá</button>
+                </div>
+            
+                <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix">
+                <img src="images/product-item.png" class="js-img position-absolute" alt="undefined">
+                <div class="col-12 d-flex p-0">
+                    <p class="item-title clearfix mb-2">
+                    <a href="" title="" class=" font-weight-bold">Wild bird</a>
+                    <span class=" d-block">1.5 kg</span>
+                    </p>
+                    <span class=" price font-weight-bold ml-auto text-right clearfix">120.000&nbsp;₫</span>
+                </div>
+                <div class="number-input d-inline-flex rounded">
+                    <button class="position-relative m-0 border-0 step-down-qty">-</button>
+                    <input class=" text-center" readonly="" min="1" name="Lines" value="1" size="2" type="number" data-variantid="85495273">
+                    <button class="position-relative m-0 border-0 step-up-qty plus">+</button>
+                </div>
+                <button class="btn btn-outline-danger remove ml-auto " title="Xoá" data-variantid="85495273">Xoá</button>
+                </div>
+            
+                <div class="d-flex cart__basket__item product mb-4 rounded ux-card position-relative clearfix">
+                <img src="images/product-item.png" class="js-img position-absolute" alt="undefined">
+                <div class="col-12 d-flex p-0">
+                    <p class="item-title clearfix mb-2">
+                    <a href="" title="" class=" font-weight-bold">Wild bird</a>
+                    <span class=" d-block">100 gr</span>
+                    </p>
+                    <span class=" price font-weight-bold ml-auto text-right clearfix">35.000&nbsp;₫</span>
+                </div>
+                <div class="number-input d-inline-flex rounded">
+                    <button class="position-relative m-0 border-0 step-down-qty">-</button>
+                    <input class=" text-center" readonly="" min="1" name="Lines" value="1" size="2" type="number" data-variantid="74502897">
+                    <button class="position-relative m-0 border-0 step-up-qty plus">+</button>
+                </div>
+                <button class="btn btn-outline-danger remove ml-auto " title="Xoá" data-variantid="74502897">Xoá</button>
+                </div>
+            </div>
+                    <div class="summary cart__summary col-md-4">
+                    <dl class="total mb-4 p-3 d-flex align-items-center clearfix flex-wrap justify-content-end rounded">
+                        <dt class="text-uppercase font-weight-bold roun">Tổng</dt>
+                        <dd class="cart__summary_total font-weight-bold ml-auto mb-0">475.000&nbsp;₫</dd>
+                    </dl>
+                    <a class="btn btn-block btn-checkout rounded mb-3 text-uppercase font-weight-bold" href="" role="button">Thanh toán</a>
+                    <hr>
+                    <a class="btn btn-block btn-clearcart js-clearcart btn-danger rounded w-100 font-weight-bold  mb-4" href="" role="button" title="Xoá tất cả">Quay lại mua sắm</a>
+                    </div>
+                </div>
+                <div class="row cart__empty d-none">
+                    <div class="col-md-12">
+                    <div class="alert alert-warning" role="alert">Không có sản phẩm nào. Quay lại <a href="" class="alert-link">cửa hàng</a> để tiếp tục mua sắm.</div>
+                    </div>
+                </div>
+                </div>
+            </div>
+        
+        <!-- End Content -->
+
+
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="footer">
+        <div class="container">
+            <div class="row g-0">
+                <div class="col-3 footer-item">
+                    <div class="footer-item__title">Gioi thieu</div>
+                    <ui class="footer-item__list">
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Trang
+                                chu</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">About
+                                store</a></li>
+                        <li class="footer-item__list--item"><a href="#"
+                                class="footer-item__list--item-link">Products</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Meals</a>
+                        </li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Blogs</a>
+                        </li>
+                    </ui>
+                </div>
+
+                <div class="col-3 footer-item">
+                    <div class="footer-item__title">Chinh sach</div>
+                    <ui class="footer-item__list">
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Security
+                                contract</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Delivery
+                                contract</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Refund
+                                contract</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Use
+                                negotiation</a></li>
+                    </ui>
+                </div>
+
+                <div class="col-3 footer-item">
+                    <div class="footer-item__title">Huong Dan</div>
+                    <ui class="footer-item__list">
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Order
+                                guideline</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Check out
+                                guidline</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Recevie
+                                guidline</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Service
+                                contract</a></li>
+                    </ui>
+                </div>
+
+                <div class="col-3 footer-item">
+                    <div class="footer-item__title">Ho tro khach hang</div>
+                    <ui class="footer-item__list">
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Search</a>
+                        </li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Login</a>
+                        </li>
+                        <li class="footer-item__list--item"><a href="#"
+                                class="footer-item__list--item-link">Register</a></li>
+                        <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Cart</a>
+                        </li>
+                    </ui>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-6 footer-item">
+                    <div class="footer-item__title">Gioi thieu</div>
+                    <ui class="footer-item__list">
+                        <li class="footer-item__list--item">
+                            <a href="#" class="footer-item__list--item-link">
+                                <span>Dia chi: </span>
+                                C11-01, so 473 Man Thien, Thu Duc, KDT Geleximco Le Trong Tan, Phuong Duong Noi, Quan Ha
+                                Dong, Ha Noi
+                            </a>
+                        </li>
+                        <li class="footer-item__list--item">
+                            <a href="mailto:group7se@gmail.com" class="footer-item__list--item-link">
+                                <span>Email: </span>
+                                group7se@gmail.com
+                            </a>
+                        </li>
+                        <li class="footer-item__list--item">
+                            <a href="tel:0979500611" class="footer-item__list--item-link">
+                                <span>Hotline: </span>
+                                0979500611
+                            </a>
+                        </li>
+                    </ui>
+                </div>
+                <div class="col-3 footer-item">
+                    <div class="footer-item__title">Contact with us</div>
+                    <ui class="footer-item__list">
+                        <li class="contact-item__list-icon--contact">
+                            <img src="/images/facebook.png" alt="facebook-store">
+                        </li>
+                        <li class="contact-item__list-icon--contact">
+                            <img src="/images/twiter.png" alt="" srcset="">
+                        </li>
+                    </ui>
+                </div>
+                <div class="col-3 footer-item">
+                    <div class="footer-item--location">
+                        <img src="/images/home-icon.png" alt="home-icon">
+                        <button type="button" class="btn btn-warning btn-lg watch-more--button">Store address</button>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0">
+                <div class="col-12 copy-right">@group7se</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- background -->
+    <!-- <div class="background">
+        <div class="container">
+            <div class="v10_531"></div>
+            <div class="v10_532"></div>
+            <div class="v10_533"></div>
+            <div class="v10_534"></div>
+        </div>
+    </div> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slick carousel -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- main js -->
+    <script type="text/javascript" src="assest/app.js"></script>
+</body>
+
+</html>

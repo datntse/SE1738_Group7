@@ -1,0 +1,969 @@
+<html class="floating-labels no-touch">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"
+    />
+    <meta
+      name="description"
+      content="PetFood - Math Imex - Thanh toán đơn hàng"
+    />
+    <title>BMOS - Thanh toán đơn hàng</title>
+
+    <link
+      rel="shortcut icon"
+      href="//bizweb.dktcdn.net/100/468/076/themes/882698/assets/checkout_favicon.ico?1677556977585"
+      type="image/x-icon"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/gh/lipis/flag-icons@6.6.6/css/flag-icons.min.css"
+    />
+
+    <link rel="stylesheet" href="/dist/css/checkout.vendor.min.css?v=4fcd86c" />
+
+    <link rel="stylesheet" href="/dist/css/checkout.min.css?v=17ca415" />
+
+    <!-- Begin checkout custom css -->
+    <style></style>
+    <!-- End checkout custom css -->
+
+    <script src="//bizweb.dktcdn.net/assets/themes_support/libphonenumber-v3.2.30.min.js?1677556977585"></script>
+
+    <script src="/dist/js/checkout.vendor.min.js?v=11006c9"></script>
+
+    <script src="/dist/js/checkout.min.js?v=ee358d5"></script>
+
+    <script>
+      var Bizweb = Bizweb || {};
+      Bizweb.id = "468076";
+      Bizweb.store = "math-imex.mysapo.net";
+
+      Bizweb.template = "checkout";
+      Bizweb.Checkout = Bizweb.Checkout || {};
+    </script>
+
+    <script>
+      window.BizwebAnalytics = window.BizwebAnalytics || {};
+      window.BizwebAnalytics.meta = window.BizwebAnalytics.meta || {};
+      window.BizwebAnalytics.meta.currency = "VND";
+      window.BizwebAnalytics.tracking_url = "/s";
+      var meta = {};
+
+      meta.customer = {
+        id: 14280998,
+        first_name: "l&#234;",
+        last_name: "ph&#225;t",
+        phone: "",
+        email: "lechiphat1090@gmail.com",
+      };
+
+      for (var attr in meta) {
+        window.BizwebAnalytics.meta[attr] = meta[attr];
+      }
+    </script>
+
+    <script src="/dist/js/stats.min.js?v=69e02f0"></script>
+    <script
+      async=""
+      src="//bizweb.dktcdn.net/web/assets/lib/js/fp.v3.3.0.min.js"
+    ></script>
+  </head>
+
+  <body data-no-turbolink="">
+    <aside>
+      <button
+        class="order-summary-toggle"
+        data-toggle="#order-summary"
+        data-toggle-class="order-summary--is-collapsed"
+      >
+        <span class="wrap">
+          <span class="order-summary-toggle__inner">
+            <span class="order-summary-toggle__text expandable">
+              Đơn hàng (1 sản phẩm)
+            </span>
+            <span
+              class="order-summary-toggle__total-recap"
+              data-bind="getTextTotalPrice()"
+              >160.000₫</span
+            >
+          </span>
+        </span>
+      </button>
+    </aside>
+
+    <div data-tg-refresh="checkout" id="checkout" class="content">
+      <form
+        id="checkoutForm"
+        method="post"
+        data-define="{
+				loadingShippingErrorMessage: 'Không thể load phí vận chuyển. Vui lòng thử lại',
+				loadingReductionCodeErrorMessage: 'Có lỗi xảy ra khi áp dụng khuyến mãi. Vui lòng thử lại',
+				submitingCheckoutErrorMessage: 'Có lỗi xảy ra khi xử lý. Vui lòng thử lại',
+				requireShipping: true,
+				requireDistrict: false,
+				requireWard: false,
+				shouldSaveCheckoutAbandon: true}"
+        action="/checkout/e5fcc7aaf4564a638ea5dd02f8d500a4"
+        data-bind-event-submit="handleCheckoutSubmit(event)"
+        data-bind-event-keypress="handleCheckoutKeyPress(event)"
+        data-bind-event-change="handleCheckoutChange(event)"
+      >
+        <input type="hidden" name="_method" value="patch" />
+        <div class="wrap">
+          <main class="main">
+            <header class="main__header">
+              <div class="logo logo--center">
+                <a href="/">
+                  <img
+                    class="logo__image logo__image--medium"
+                    alt="PetFood - Math Imex"
+                    src="/images/Logo.png"
+                  />
+                </a>
+              </div>
+            </header>
+            <div class="main__content">
+              <article class="animate-floating-labels row">
+                <div class="col col--two">
+                  <section class="section">
+                    <div class="section__header">
+                      <div class="layout-flex">
+                        <h2
+                          class="section__title layout-flex__item layout-flex__item--stretch">
+                            <i class="fa fa-id-card-o fa-lg section__title--icon hide-on-desktop"></i>
+                            Thông tin nhận hàng
+                        </h2>
+
+                        <a
+                          href="/account/logout?returnUrl=/checkout/e5fcc7aaf4564a638ea5dd02f8d500a4"
+                        >
+                          <i class="fa fa-sign-out fa-lg"></i>
+                          <span>Đăng xuất</span>
+                        </a>
+                      </div>
+                    </div>
+                    <div class="section__content">
+                      <div class="fieldset">
+                        <div class="field field--show-floating-label">
+                          <div class="field__input-wrapper">
+                            <label for="customer-address" class="field__label">Sổ địa chỉ</label>
+                            <select
+                              size="1"
+                              class="field__input field__input--select"
+                              id="customer-address"
+                              data-bind="customerAddress"
+                            >
+                              <option value="0">Địa chỉ khác...</option>
+
+                              <option
+                                data-name="Phát Phát"
+                                data-address="Quận 9"
+                                data-phone="0947507007"
+                                data-province="2"
+                                data-district="38"
+                                data-ward="9251"
+                              >
+                                Phát Phát, Quận 9, Phường Long Thạnh Mỹ, Quận 9,
+                                TP Hồ Chí Minh
+                              </option>
+                            </select>
+                            <div class="field__caret">
+                              <i class="fa fa-caret-down"></i>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="field field--show-floating-label field--disabled"
+                        >
+                          <input
+                            name="email"
+                            type="hidden"
+                            value="lechiphat1090@gmail.com"
+                          />
+                          <div class="field__input-wrapper">
+                            <label for="email" class="field__label">
+                              Email
+                            </label>
+                            <input
+                              id="email"
+                              type="email"
+                              class="field__input"
+                              data-bind="email"
+                              value="lechiphat1090@gmail.com"
+                              disabled=""
+                            />
+                          </div>
+                        </div>
+
+                        <div
+                          class="field field--show-floating-label"
+                          data-bind-class="{'field--show-floating-label': billing.name}"
+                        >
+                          <div class="field__input-wrapper">
+                            <label for="billingName" class="field__label"
+                              >Họ và tên</label
+                            >
+                            <input
+                              name="billingName"
+                              id="billingName"
+                              type="text"
+                              class="field__input"
+                              data-bind="billing.name"
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div
+                          class="field field--show-floating-label"
+                          data-bind-class="{'field--show-floating-label': billing.phone}"
+                        >
+                          <div
+                            class="field__input-wrapper field__input-wrapper--connected"
+                            data-define="{phoneInput: new InputPhone(this)}"
+                          >
+                            <label for="billingPhone" class="field__label">
+                              Số điện thoại (tùy chọn)
+                            </label>
+                            <input
+                              name="billingPhone"
+                              id="billingPhone"
+                              type="tel"
+                              class="field__input"
+                              data-bind="billing.phone"
+                              value=""
+                            />
+                            <div class="field__input-phone-region-wrapper">
+                              <select
+                                class="field__input select-phone-region select2-hidden-accessible"
+                                name="billingPhoneRegion"
+                                data-init-value="VN"
+                                data-select2-id="select2-data-4-yeru"
+                                tabindex="-1"
+                                aria-hidden="true"
+                              >
+                                <option
+                                  value="VN"
+                                  data-select2-id="select2-data-203-gzaq"
+                                >
+                                  Vietnam (+84)
+                                </option>
+                                </select
+                              ><span
+                                class="select2 select2-container select2-container--default"
+                                dir="ltr"
+                                data-select2-id="select2-data-5-i7ce"
+                                style="width: 56px"
+                                ><span class="selection"
+                                  ><span
+                                    class="select2-selection select2-selection--single select2-phone-region"
+                                    role="combobox"
+                                    aria-haspopup="true"
+                                    aria-expanded="false"
+                                    tabindex="0"
+                                    aria-disabled="false"
+                                    aria-labelledby="select2-billingPhoneRegion-99-container"
+                                    ><span
+                                      class="select2-selection__rendered"
+                                      id="select2-billingPhoneRegion-99-container"
+                                      role="textbox"
+                                      aria-readonly="true"
+                                      title="Vietnam (+84)"
+                                      ><span class="fi fi-vn"></span></span
+                                    ><span
+                                      class="select2-selection__arrow"
+                                      role="presentation"
+                                      ><b
+                                        role="presentation"
+                                      ></b></span></span></span
+                                ><span
+                                  class="dropdown-wrapper"
+                                  aria-hidden="true"
+                                ></span
+                              ></span>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div
+                          class="field field--show-floating-label"
+                          data-bind-class="{'field--show-floating-label': billing.address}"
+                        >
+                          <div class="field__input-wrapper">
+                            <label for="billingAddress" class="field__label">
+                              Địa chỉ (tùy chọn)
+                            </label>
+                            <input
+                              name="billingAddress"
+                              id="billingAddress"
+                              type="text"
+                              class="field__input"
+                              data-bind="billing.address"
+                              value=""
+                            />
+                          </div>
+                        </div>
+
+                        <div class="field field--show-floating-label">
+                          <div
+                            class="field__input-wrapper field__input-wrapper--select2"
+                          >
+                            <label for="billingProvince" class="field__label"
+                              >Tỉnh thành</label
+                            >
+                            <select
+                              name="billingProvince"
+                              id="billingProvince"
+                              size="1"
+                              class="field__input field__input--select select2-hidden-accessible"
+                              data-bind="billing.province"
+                              value="2"
+                              data-address-type="province"
+                              data-address-zone="billing"
+                              data-select2-id="select2-data-billingProvince"
+                              tabindex="-1"
+                              aria-hidden="true"
+                            >
+                              <option value="" hidden="">---</option>
+                              <option value="1">Hà Nội</option>
+                              <option
+                                value="2"
+                                selected=""
+                                data-select2-id="select2-data-210-cjk9"
+                              >
+                                TP Hồ Chí Minh
+                              </option>
+                              <option value="3">An Giang</option>
+                              <option value="4">Bà Rịa-Vũng Tàu</option>
+                              <option value="5">Bắc Giang</option>
+                              <option value="6">Bắc Kạn</option>
+                              <option value="7">Bạc Liêu</option>
+                              <option value="8">Bắc Ninh</option>
+                              <option value="9">Bến Tre</option>
+                              <option value="10">Bình Dương</option>
+                              <option value="11">Bình Định</option>
+                              <option value="12">Bình Phước</option>
+                              <option value="13">Bình Thuận</option>
+                              <option value="14">Cà Mau</option>
+                              <option value="15">Cao Bằng</option>
+                              <option value="16">Cần Thơ</option>
+                              <option value="17">Đà Nẵng</option>
+                              <option value="18">Đắk Lắk</option>
+                              <option value="19">Đắk Nông</option>
+                              <option value="20">Điện Biên</option>
+                              <option value="21">Đồng Nai</option>
+                              <option value="22">Đồng Tháp</option>
+                              <option value="23">Gia Lai</option>
+                              <option value="24">Hà Giang</option>
+                              <option value="25">Hà Nam</option>
+                              <option value="26">Hà Tĩnh</option>
+                              <option value="27">Hải Dương</option>
+                              <option value="28">Hải Phòng</option>
+                              <option value="29">Hậu Giang</option>
+                              <option value="30">Hòa Bình</option>
+                              <option value="31">Hưng Yên</option>
+                              <option value="32">Khánh Hòa</option>
+                              <option value="33">Kiên Giang</option>
+                              <option value="34">Kon Tum</option>
+                              <option value="35">Lai Châu</option>
+                              <option value="36">Lâm Đồng</option>
+                              <option value="37">Lạng Sơn</option>
+                              <option value="38">Lào Cai</option>
+                              <option value="39">Long An</option>
+                              <option value="40">Nam Định</option>
+                              <option value="41">Nghệ An</option>
+                              <option value="42">Ninh Bình</option>
+                              <option value="43">Ninh Thuận</option>
+                              <option value="44">Phú Thọ</option>
+                              <option value="45">Phú Yên</option>
+                              <option value="46">Quảng Bình</option>
+                              <option value="47">Quảng Nam</option>
+                              <option value="48">Quảng Ngãi</option>
+                              <option value="49">Quảng Ninh</option>
+                              <option value="50">Quảng Trị</option>
+                              <option value="51">Sóc Trăng</option>
+                              <option value="52">Sơn La</option>
+                              <option value="53">Tây Ninh</option>
+                              <option value="54">Thái Bình</option>
+                              <option value="55">Thái Nguyên</option>
+                              <option value="56">Thanh Hóa</option>
+                              <option value="57">Thừa Thiên Huế</option>
+                              <option value="58">Tiền Giang</option>
+                              <option value="59">Trà Vinh</option>
+                              <option value="60">Tuyên Quang</option>
+                              <option value="61">Vĩnh Long</option>
+                              <option value="62">Vĩnh Phúc</option>
+                              <option value="63">Yên Bái</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="field field--show-floating-label">
+                          <div
+                            class="field__input-wrapper field__input-wrapper--select2"
+                          >
+                            <label for="billingDistrict" class="field__label">
+                              Quận huyện (tùy chọn)
+                            </label>
+                            <select
+                              name="billingDistrict"
+                              id="billingDistrict"
+                              size="1"
+                              class="field__input field__input--select select2-hidden-accessible"
+                              value="38"
+                              data-bind="billing.district"
+                              data-address-type="district"
+                              data-address-zone="billing"
+                              data-select2-id="select2-data-billingDistrict"
+                              tabindex="-1"
+                              aria-hidden="true"
+                            >
+                              <option value="" hidden="">---</option>
+                              <option value="30">Quận 1</option>
+                              <option value="31">Quận 2</option>
+                              <option value="32">Quận 3</option>
+                              <option value="33">Quận 4</option>
+                              <option value="34">Quận 5</option>
+                              <option value="35">Quận 6</option>
+                              <option value="36">Quận 7</option>
+                              <option value="37">Quận 8</option>
+                              <option
+                                value="38"
+                                selected=""
+                                data-select2-id="select2-data-211-smjm"
+                              >
+                                Quận 9
+                              </option>
+                              <option value="39">Quận 10</option>
+                              <option value="40">Quận 11</option>
+                              <option value="41">Quận 12</option>
+                              <option value="42">Quận Gò Vấp</option>
+                              <option value="43">Quận Tân Bình</option>
+                              <option value="44">Quận Tân Phú</option>
+                              <option value="45">Quận Bình Thạnh</option>
+                              <option value="46">Quận Phú Nhuận</option>
+                              <option value="47">Quận Thủ Đức</option>
+                              <option value="48">Quận Bình Tân</option>
+                              <option value="49">Huyện Củ Chi</option>
+                              <option value="50">Huyện Hóc Môn</option>
+                              <option value="51">Huyện Bình Chánh</option>
+                              <option value="52">Huyện Nhà Bè</option>
+                              <option value="53">Huyện Cần Giờ</option>
+                              <option value="10924">Thành phố Thủ Đức</option>
+                            </select>
+                          </div>
+                        </div>
+
+                        <div class="field field--show-floating-label">
+                          <div
+                            class="field__input-wrapper field__input-wrapper--select2"
+                          >
+                            <label for="billingWard" class="field__label">
+                              Phường xã (tùy chọn)
+                            </label>
+                            <select
+                              name="billingWard"
+                              id="billingWard"
+                              size="1"
+                              class="field__input field__input--select select2-hidden-accessible"
+                              value="9251"
+                              data-bind="billing.ward"
+                              data-address-type="ward"
+                              data-address-zone="billing"
+                              data-select2-id="select2-data-billingWard"
+                              tabindex="-1"
+                              aria-hidden="true"
+                            >
+                              <option value="" hidden="">---</option>
+                              <option value="9250">Phường Long Bình</option>
+                              <option
+                                value="9251"
+                                selected=""
+                                data-select2-id="select2-data-212-6z7b"
+                              >
+                                Phường Long Thạnh Mỹ
+                              </option>
+                              <option value="9252">Phường Tân Phú</option>
+                              <option value="9253">Phường Hiệp Phú</option>
+                              <option value="9254">
+                                Phường Tăng Nhơn Phú A
+                              </option>
+                              <option value="9255">
+                                Phường Tăng Nhơn Phú B
+                              </option>
+                              <option value="9256">Phường Phước Long B</option>
+                              <option value="9257">Phường Phước Long A</option>
+                              <option value="9258">Phường Trường Thạnh</option>
+                              <option value="9259">Phường Long Phước</option>
+                              <option value="9260">Phường Long Trường</option>
+                              <option value="9261">Phường Phước Bình</option>
+                              <option value="9262">Phường Phú Hữu</option>
+                            </select>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+
+                  <div class="fieldset">
+                    <h3 class="visually-hidden">Ghi chú</h3>
+                    <div
+                      class="field"
+                      data-bind-class="{'field--show-floating-label': note}"
+                    >
+                      <div class="field__input-wrapper">
+                        <label for="note" class="field__label">
+                          Ghi chú (tùy chọn)
+                        </label>
+                        <textarea
+                          name="note"
+                          id="note"
+                          class="field__input"
+                          data-bind="note"
+                        ></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col col--two">
+                  <section class="section" data-define="{shippingMethod: ''}">
+                    <div class="section__header">
+                      <div class="layout-flex">
+                        <h2
+                          class="section__title layout-flex__item layout-flex__item--stretch"
+                        >
+                          <i
+                            class="fa fa-truck fa-lg section__title--icon hide-on-desktop"
+                          ></i>
+                          Vận chuyển
+                        </h2>
+                      </div>
+                    </div>
+                    <div
+                      class="section__content"
+                      data-tg-refresh="refreshShipping"
+                      id="shippingMethodList"
+                      data-define="{isAddressSelecting: false, shippingMethods: []}"
+                    >
+                      <div
+                        class="alert alert--loader spinner spinner--active hide"
+                        data-bind-show="isLoadingShippingMethod"
+                      >
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          class="spinner-loader"
+                        >
+                          <use href="#spinner"></use>
+                        </svg>
+                      </div>
+
+                      <div
+                        class="alert alert-retry alert--danger hide"
+                        data-bind-event-click="handleShippingMethodErrorRetry()"
+                        data-bind-show="!isLoadingShippingMethod &amp;&amp; !isAddressSelecting &amp;&amp; isLoadingShippingError"
+                      >
+                        <span data-bind="loadingShippingErrorMessage"
+                          >Không thể load phí vận chuyển. Vui lòng thử lại</span
+                        >
+                        <i class="fa fa-refresh"></i>
+                      </div>
+
+                      <div
+                        class="content-box"
+                        data-bind-show="!isLoadingShippingMethod &amp;&amp; !isAddressSelecting &amp;&amp; !isLoadingShippingError"
+                      >
+                        <div
+                          class="content-box__row"
+                          data-define-array="{shippingMethods: {name: '688153_0,40.000 VND', textPrice: '40.000₫', textDiscountPrice: '-', subtotalPriceWithShippingFee: '160.000₫'}}"
+                        >
+                          <div class="radio-wrapper">
+                            <div class="radio__input">
+                              <input
+                                type="radio"
+                                class="input-radio"
+                                name="shippingMethod"
+                                id="shippingMethod-688153_0"
+                                value="688153_0,40.000 VND"
+                                data-bind="shippingMethod"
+                              />
+                            </div>
+                            <label
+                              for="shippingMethod-688153_0"
+                              class="radio__label"
+                            >
+                              <span class="radio__label__primary">
+                                <span>Giao hàng tận nơi</span>
+                              </span>
+                              <span class="radio__label__accessory">
+                                <span class="content-box__emphasis price">
+                                  40.000₫
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div
+                        class="alert alert--info hide"
+                        data-bind-show="!isLoadingShippingMethod &amp;&amp; isAddressSelecting"
+                      >
+                        Vui lòng nhập thông tin giao hàng
+                      </div>
+                    </div>
+                  </section>
+
+                  <section class="section">
+                    <div class="section__header">
+                      <div class="layout-flex">
+                        <h2
+                          class="section__title layout-flex__item layout-flex__item--stretch"
+                        >
+                          <i
+                            class="fa fa-credit-card fa-lg section__title--icon hide-on-desktop"
+                          ></i>
+                          Thanh toán
+                        </h2>
+                      </div>
+                    </div>
+                    <div class="section__content">
+                      <div
+                        class="content-box"
+                        data-define="{paymentMethod: undefined}"
+                      >
+                        <div class="content-box__row">
+                          <div class="radio-wrapper">
+                            <div class="radio__input">
+                              <input
+                                name="paymentMethod"
+                                id="paymentMethod-551153"
+                                type="radio"
+                                class="input-radio"
+                                data-bind="paymentMethod"
+                                value="551153"
+                              />
+                            </div>
+                            <label
+                              for="paymentMethod-551153"
+                              class="radio__label"
+                            >
+                              <span class="radio__label__primary"
+                                >Thanh toán khi giao hàng (COD)</span
+                              >
+                              <span class="radio__label__accessory">
+                                <span class="radio__label__icon">
+                                  <i class="payment-icon payment-icon--4"></i>
+                                </span>
+                              </span>
+                            </label>
+                          </div>
+
+                          <div
+                            class="content-box__row__desc"
+                            data-bind-show="paymentMethod == 551153"
+                          >
+                            <p>Bạn chỉ phải thanh toán khi nhận được hàng</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </article>
+              <div
+                class="field__input-btn-wrapper field__input-btn-wrapper--vertical hide-on-desktop"
+              >
+                <button
+                  type="submit"
+                  class="btn btn-checkout spinner"
+                  data-bind-class="{'spinner--active': isSubmitingCheckout}"
+                  data-bind-disabled="isSubmitingCheckout || isLoadingReductionCode"
+                >
+                  <span class="spinner-label">ĐẶT HÀNG</span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="spinner-loader"
+                  >
+                    <use href="#spinner"></use>
+                  </svg>
+                </button>
+
+                <a href="/cart" class="previous-link">
+                  <i class="previous-link__arrow">❮</i>
+                  <span class="previous-link__content">Quay về giỏ hàng</span>
+                </a>
+              </div>
+
+              <div id="common-alert" data-tg-refresh="refreshError">
+                <div
+                  class="alert alert--danger hide-on-desktop hide"
+                  data-bind-show="!isSubmitingCheckout &amp;&amp; isSubmitingCheckoutError"
+                  data-bind="submitingCheckoutErrorMessage"
+                >
+                  Có lỗi xảy ra khi xử lý. Vui lòng thử lại
+                </div>
+              </div>
+            </div>
+          </main>
+          <aside class="sidebar">
+            <div class="sidebar__header">
+              <h2 class="sidebar__title">Đơn hàng (1 sản phẩm)</h2>
+            </div>
+            <div class="sidebar__content">
+              <div
+                id="order-summary"
+                class="order-summary order-summary--is-collapsed"
+              >
+                <div class="order-summary__sections">
+                  <div
+                    class="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable order-summary--collapse-element"
+                  >
+                    <table class="product-table">
+                      <caption class="visually-hidden">
+                        Chi tiết đơn hàng
+                      </caption>
+                      <thead class="product-table__header">
+                        <tr>
+                          <th>
+                            <span class="visually-hidden">Ảnh sản phẩm</span>
+                          </th>
+                          <th>
+                            <span class="visually-hidden">Mô tả</span>
+                          </th>
+                          <th>
+                            <span class="visually-hidden">Sổ lượng</span>
+                          </th>
+                          <th>
+                            <span class="visually-hidden">Đơn giá</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="product">
+                          <td class="product__image">
+                            <div class="product-thumbnail">
+                              <div
+                                class="product-thumbnail__wrapper"
+                                data-tg-static=""
+                              >
+                                <img
+                                  src="/images/product-item.png"
+                                  alt=""
+                                  class="product-thumbnail__image"
+                                />
+                              </div>
+                              <span class="product-thumbnail__quantity">1</span>
+                            </div>
+                          </td>
+                          <th class="product__description">
+                            <span class="product__description__name">
+                              THỨC ĂN CHO CHIM MAU ĐẸP
+                            </span>
+
+                            <span class="product__description__property">
+                              1.5 kg
+                            </span>
+                          </th>
+                          <td class="product__quantity visually-hidden">
+                            <em>Số lượng:</em> 1
+                          </td>
+                          <td class="product__price">120.000₫</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div
+                    class="order-summary__section order-summary__section--product-list order-summary__section--is-scrollable order-summary--collapse-element"
+                  >
+                    <table class="product-table">
+                      <caption class="visually-hidden">
+                        Chi tiết đơn hàng
+                      </caption>
+                      <thead class="product-table__header">
+                        <tr>
+                          <th>
+                            <span class="visually-hidden">Ảnh sản phẩm</span>
+                          </th>
+                          <th>
+                            <span class="visually-hidden">Mô tả</span>
+                          </th>
+                          <th>
+                            <span class="visually-hidden">Sổ lượng</span>
+                          </th>
+                          <th>
+                            <span class="visually-hidden">Đơn giá</span>
+                          </th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr class="product">
+                          <td class="product__image">
+                            <div class="product-thumbnail">
+                              <div
+                                class="product-thumbnail__wrapper"
+                                data-tg-static=""
+                              >
+                                <img
+                                  src="/images/product-item.png"
+                                  alt=""
+                                  class="product-thumbnail__image"
+                                />
+                              </div>
+                              <span class="product-thumbnail__quantity">1</span>
+                            </div>
+                          </td>
+                          <th class="product__description">
+                            <span class="product__description__name">
+                              THỨC ĂN CHO CHIM MAU ĐẸP
+                            </span>
+
+                            <span class="product__description__property">
+                              1.5 kg
+                            </span>
+                          </th>
+                          <td class="product__quantity visually-hidden">
+                            <em>Số lượng:</em> 1
+                          </td>
+                          <td class="product__price">120.000₫</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <div
+                    class="order-summary__section order-summary__section--discount-code"
+                    data-tg-refresh="refreshDiscount"
+                    id="discountCode"
+                  >
+                    <!--Bonus point-->
+                  </div>
+                  <div
+                    class="order-summary__section order-summary__section--total-lines order-summary--collapse-element"
+                    data-define="{subTotalPriceText: '120.000₫'}"
+                    data-tg-refresh="refreshOrderTotalPrice"
+                    id="orderSummary"
+                  >
+                    <table class="total-line-table">
+                      <caption class="visually-hidden">
+                        Tổng giá trị
+                      </caption>
+                      <thead>
+                        <tr>
+                          <td><span class="visually-hidden">Mô tả</span></td>
+                          <td><span class="visually-hidden">Giá tiền</span></td>
+                        </tr>
+                      </thead>
+                      <tbody class="total-line-table__tbody">
+                        <tr class="total-line total-line--subtotal">
+                          <th class="total-line__name">Tạm tính</th>
+                          <td class="total-line__price">240.000₫</td>
+                        </tr>
+
+                        <tr class="total-line total-line--shipping-fee">
+                          <th class="total-line__name">Phí vận chuyển</th>
+                          <!--data-bind="getTextTotalPrice()"-->
+                          <td
+                            class="total-line__price"
+                            data-bind=""
+                          >
+                            40.000₫
+                          </td>
+                        </tr>
+                      </tbody>
+                      <tfoot class="total-line-table__footer">
+                        <tr class="total-line payment-due">
+                          <th class="total-line__name">
+                            <span class="payment-due__label-total">
+                              Tổng cộng
+                            </span>
+                          </th>
+                          <td class="total-line__price">
+                            <!--data-bind="getTextTotalPrice()"-->
+                            <span
+                              class="payment-due__price"
+                              data-bind=""
+                              >280.000₫</span>
+                          </td>
+                        </tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                  <div
+                    class="order-summary__nav field__input-btn-wrapper hide-on-mobile layout-flex--row-reverse"
+                  >
+                    <button
+                      type="submit"
+                      class="btn btn-checkout spinner"
+                      data-bind-class="{'spinner--active': isSubmitingCheckout}"
+                      data-bind-disabled="isSubmitingCheckout || isLoadingReductionCode"
+                    >
+                      <span class="spinner-label">ĐẶT HÀNG</span>
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        class="spinner-loader"
+                      >
+                        <use href="#spinner"></use>
+                      </svg>
+                    </button>
+
+                    <a href="/cart" class="previous-link">
+                      <i class="previous-link__arrow">❮</i>
+                      <span class="previous-link__content"
+                        >Quay về giỏ hàng</span
+                      >
+                    </a>
+                  </div>
+                  <div id="common-alert-sidebar" data-tg-refresh="refreshError">
+                    <div
+                      class="alert alert--danger hide-on-mobile hide"
+                      data-bind-show="!isSubmitingCheckout &amp;&amp; isSubmitingCheckoutError"
+                      data-bind="submitingCheckoutErrorMessage"
+                    >
+                      Có lỗi xảy ra khi xử lý. Vui lòng thử lại
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </form>
+
+      <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
+        <symbol id="spinner">
+          <svg viewBox="0 0 30 30">
+            <circle
+              stroke="currentColor"
+              stroke-width="2"
+              fill="none"
+              stroke-linecap="round"
+              stroke-dasharray="85%"
+              cx="50%"
+              cy="50%"
+              r="40%"
+            >
+              <animateTransform
+                attributeName="transform"
+                type="rotate"
+                from="0 15 15"
+                to="360 15 15"
+                dur="0.7s"
+                repeatCount="indefinite"
+              ></animateTransform>
+            </circle>
+          </svg>
+        </symbol>
+      </svg>
+    </div>
+
+    <textarea
+      id="BFI_DATA"
+      style="width: 1px; height: 1px; display: none"
+    ></textarea>
+    <title> </title>
+
+  </body>
+</html>
