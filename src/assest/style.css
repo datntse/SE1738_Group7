@@ -25,6 +25,7 @@ html {
     font-family:  'Roboto', sans-serif;
     box-sizing: border-box;
 }
+.blog-border,
 .product-border {
     border: 1px var(--border-color) solid;
     border-radius: 10px;
@@ -159,6 +160,7 @@ html {
 /* Product  */
 
 .product-row,
+.blog-row,
 .routing-row {
     justify-content: center;
 
@@ -180,13 +182,22 @@ html {
     background-size: contain;
     background-repeat: no-repeat;
 }
+.blog-img-item {
+    background-image: url("https://st.quantrimang.com/photos/image/2016/08/27/loai-chim-10.jpg");
+    padding-top: 100%;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
 
 .product-content .product-desc,
+.bloglist-content .blog-desc,
 .routing-content .routing-desc {
     padding: 10px;
 }
 
 .product-desc__title,
+.blog-desc__title,
 .routing-desc__title {
     font-size: 2.4rem;
     font-weight: 700;
@@ -194,6 +205,7 @@ html {
 }
 
 .product-desc__price,
+.blog-desc__price,
 .routing-desc__price {
     font-size: 1.8rem;
     font-weight: 700;
@@ -244,6 +256,7 @@ html {
 /* Slick */
 
 .product-item,
+.bloglist-item,
 .routing-item {
     padding: 0 10px;
 }
@@ -545,6 +558,7 @@ html {
     margin-left: 15px;
 }
 
+.content_blog-list,
 .content_routing-list--product {
     margin-bottom: 10px;
 }
@@ -558,8 +572,20 @@ html {
     background-size: cover;
 }
 
+.blog-list__title,
 .routing-list__title {
     font-size: 1.8rem;
     font-weight: 700;
     margin: 10px 0;
+}
+.blogdetailtitle-list__title {
+    font-size: 2.4rem;
+    font-weight: 900;
+    margin: 10px 10px;
+}
+.blogdetail-list__title {
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin: 15px 10px;
+
 }
