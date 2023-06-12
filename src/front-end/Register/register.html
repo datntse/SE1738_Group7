@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/register.css">
+    <title>Đăng ký tài khoản</title>
+</head>
+
+<body>
+    <div id="wrapper">
+        <div id="form-register">
+
+            <div class="register-account">
+                <form action="~/Home/Register" method="post">
+                    <h2>Đăng ký tài khoản</h2>
+                    <div class="form-group">
+                        <label for="firstname"></label>
+                        <input type="text" name="firstname" value="" id="" class="input input--firstname"
+                            placeholder="Họ" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="lastname"></label>
+                        <input type="text" name="lastname" value="" id="" class="input input--lastname"
+                            placeholder="Tên" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone"></label>
+                        <input type="text" name="phone" value="" id="phone" class="input input--phone"
+                            placeholder="Số điện thoại" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email"></label>
+                        <input type="email" name="email" value="" id="" class="input input--email" placeholder="E-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password"></label>
+                        <input type="password" name="password" value="" id="password" class="input input--password"
+                            placeholder="Mật khẩu" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="confirmPassword"></label>
+                        <input type="password" name="confirmPassword" value="" id="confirm_password" class="input input--password"
+                            placeholder="Nhập lại mật khẩu" required>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-login"><b>Đăng ký</b></button>
+                    </div>
+                </form>
+            </div>
+
+            <div class="login-social">
+                <div class="recommend">
+                    <div class="line">
+                        <span class="text">Hoặc đăng nhập qua</span>
+                    </div>
+                </div>
+                <div class="icon">
+                    <a href="http://" class="login-icon"><img width="150px" height="40px" src="images/fb.png"
+                            alt=""></a>
+                    <a href="http://" class="login-icon"><img width="150px" height="40px" src="images/gg.png"
+                            alt=""></a>
+                </div>
+            </div>
+
+            <div class="others">
+                <div class="others-button">
+                    <a href="~/Home/Login" class="btn btn-name"><b>Đăng nhập</b></a>
+                    <a href="~/Home/Index" class="btn btn-name"><b>Quay lại trang chủ</b></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="js/site.js"></script>
+</body>
+
+</html>
