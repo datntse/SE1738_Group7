@@ -1,7 +1,15 @@
+using BMOS.Models.Entities;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<BmosContext>(options =>
+{
+	options.UseSqlServer(builder.Configuration.GetConnectionString("DbConnect"));
+});
 
 var app = builder.Build();
 
