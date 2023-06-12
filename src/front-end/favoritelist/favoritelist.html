@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css ">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <link rel="stylesheet" href="/assest/background.css">
+    <link rel="stylesheet" href="assest/resetcss.css">
+    <link rel="stylesheet" href="assest/favoritelist.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400&family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <title>User Profile</title>
+</head>
+
+<body>
+    <div class="wrapper">
+        <!-- Header -->
+        <div class="header">
+            <div class="container">
+                <div class="row header-search">
+                    <div class="col-2 header-logo">
+                        <img class="header-logo" src="images/Logo.png" alt="Logo">
+                    </div>
+                    <div class="col-6 header-search__form">
+                        <div class="header-search__form--input">
+                            <input class="header-search__form--input-field" type="text" placeholder="Gõ từ khóa bạn muốn tìm kiếm">
+                        </div>
+                        <div class="header-search_form--button">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                    </div>
+                    <div class="col-4">
+                        <div class="row header-option">
+                            <div class="col header-option-notify ">
+                                <img src="images/bell.png" alt="">
+                            </div>
+                            <div class="col header-option-cart">
+                                <img src="images/cart.png" alt="" srcset="">
+                            </div>
+                            <div class="col header-option-profile">
+                                <img src="images/user-icon.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar -->
+        <div class="header-navbar">
+            <div class="container header-navbar__list">
+                <ul class="header-navbar__page-list">
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">Trang chủ</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">Về cửa hàng</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">Sản phẩm</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">Lộ trình ăn</a></li>
+                    <li class="header-navbar__page-list-item"><a href="#"
+                            class="header-navbar__page-list-item-link">Blog</a></li>
+                </ul>
+                <div class="header-navbar__location-shop">
+                    <div class="location-shop__title">Địa chỉ cửa hàng</div>
+                    <div class="location-shop__icon">
+                        <img src="images/location-icon.png" alt="" srcset="">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--UserProfile-->
+        <div class ="container">
+            <div class="row content">
+                <div class ="serprofile">
+                    <div class="col-12 userprofile_title" style="margin: 2rem 0px; font-size: 2rem;">Trang chủ/ chỉnh sửa người dùng</div>
+                </div>
+                <div class="favorite">
+                    <div class="col-8 favorite_list" style="margin-right: 0.5rem;">
+                        <h1 style="padding: 1rem 0px 0px 1rem; font-size: 1.5rem;"><b>Chọn tất cả</b></h1>
+                        <hr style="margin: 0px 1rem; margin-top: 1rem;">
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                      <div class="img_favorite">
+                                        <input class="form-check-input" type="checkbox" style="margin-right: 1rem;">
+                                        <img src="/images/birdfood.png" style="width: 12rem;"/>
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                      <h3 style="font-size: 1.5rem;">Sản phẩm: thức ăn chim ...</h3>
+                                      <h3 style="font-size: 1.5rem; margin-top: 1rem;">Giá: 82.000vnd</h3>  
+                                      <h3 style="font-size: 1.5rem; margin-top: 1rem;">Thông tin sản phẩm</h3>                                                                            
+                                      <p class="mb-4 mb-md-0">
+                                        alo alo 123 chim se goi dai bang !!!aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                      </p>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="countttt">
+                                            <h1>Quantity</h1>
+                                            <div class="counbt qty">
+                                                <span class="minus bg-dark">-</span>
+                                                <input type="number" class="count" name="qty" value="1">
+                                                <span class="plus bg-dark">+</span>
+                                            </div>
+                                        </div>
+                                      <div class="d-flex flex-column mt-4">
+                                        <button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button>
+                                        <button class="btn btn-outline-primary mt-2" type="button">
+                                          Xóa
+                                        </button>
+                                      </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                            
+                            <hr style="margin: 0px 1rem; margin-top: 1rem;">
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                      <div class="img_favorite">
+                                        <input class="form-check-input" type="checkbox" style="margin-right: 1rem;">
+                                        <img src="/images/birdfood.png" style="width: 12rem;"/>
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                      <h3 style="font-size: 1.5rem;">Sản phẩm: thức ăn chim ...</h3>
+                                      <h3 style="font-size: 1.5rem; margin-top: 1rem;">Giá: 82.000vnd</h3>  
+                                      <h3 style="font-size: 1.5rem; margin-top: 1rem;">Thông tin sản phẩm</h3>                                                                            
+                                      <p class="mb-4 mb-md-0">
+                                        alo alo 123 chim se goi dai bang !!!aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                      </p>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="countttt">
+                                            <h1>Quantity</h1>
+                                            <div class="counbt qty">
+                                                <span class="minus bg-dark">-</span>
+                                                <input type="number" class="count" name="qty" value="1">
+                                                <span class="plus bg-dark">+</span>
+                                            </div>
+                                        </div>
+                                      <div class="d-flex flex-column mt-4">
+                                        <button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button>
+                                        <button class="btn btn-outline-primary mt-2" type="button">
+                                          Xóa
+                                        </button>
+                                      </div>
+                                    </div>
+                                  
+                                </div>
+                            </div>  
+
+                            <hr style="margin: 0px 1rem; margin-top: 1rem;">
+
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-md-12 col-lg-3 col-xl-3 mb-4 mb-lg-0">
+                                      <div class="img_favorite">
+                                        <input class="form-check-input" type="checkbox" style="margin-right: 1rem;">
+                                        <img src="/images/birdfood.png" style="width: 12rem;"/>
+                                        
+                                      </div>
+                                    </div>
+                                    <div class="col-md-6 col-lg-6 col-xl-6">
+                                      <h3 style="font-size: 1.5rem;">Sản phẩm: thức ăn chim ...</h3>
+                                      <h3 style="font-size: 1.5rem; margin-top: 1rem;">Giá: 82.000vnd</h3>  
+                                      <h3 style="font-size: 1.5rem; margin-top: 1rem;">Thông tin sản phẩm</h3>                                                                            
+                                      <p class="mb-4 mb-md-0">
+                                        alo alo 123 chim se goi dai bang !!!aaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                        aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+                                      </p>
+                                    </div>
+                                    <div class="col-md-6 col-lg-3 col-xl-3 border-sm-start-none border-start">
+                                        <div class="countttt">
+                                            <h1>Quantity</h1>
+                                            <div class="counbt qty">
+                                                <span class="minus bg-dark">-</span>
+                                                <input type="number" class="count" name="qty" value="1">
+                                                <span class="plus bg-dark">+</span>
+                                            </div>
+                                        </div>
+                                      <div class="d-flex flex-column mt-4">
+                                        <button class="btn btn-primary" type="button">Thêm vào giỏ hàng</button>
+                                        <button class="btn btn-outline-primary mt-2" type="button">
+                                          Xóa
+                                        </button>
+                                      </div>
+                                    </div>
+                                    <div class="col-12 watch-more__button">
+                                        <button type="button" class="btn btn-warning btn-lg watch-more--button">Xem thêm</button>
+                                    </div>
+                                </div>
+                            </div>  
+
+                    </div> 
+                    <div class="container col-4 favorite_list_edit" style="margin-left: 0.5rem;">
+                        <div class="col-8 favorite_remove">Xóa</div>
+                        <div class="col-8 favorite_add">Thêm tất cả vào giỏ hàng</div>
+                        <div class="favorite_recom">Đề xuất</div>
+                        <div class="favorite_img">
+                            <div class="col-3">
+                                <img src="/images/birdfood.png" alt="" style="width: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-9">
+                                <h1 style="font-size: 3rem;">Food bird</h1>
+                                <h1 style="color: red;font-size: 2rem; padding-top: 1rem;">100.000vnd</h1>
+                            </div>
+                        </div>
+                        <div class="favorite_img">
+                            <div class="col-3">
+                                <img src="/images/birdfood.png" alt="" style="width: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-9">
+                                <h1 style="font-size: 3rem;">Food bird</h1>
+                                <h1 style="color: red;font-size: 2rem; padding-top: 1rem;">100.000vnd</h1>
+                            </div>
+                        </div>
+                        <div class="favorite_img">
+                            <div class="col-3">
+                                <img src="/images/birdfood.png" alt="" style="width: 100%; padding: 10px;">
+                            </div>
+                            <div class="col-9">
+                                <h1 style="font-size: 3rem;">Food bird</h1>
+                                <h1 style="color: red;font-size: 2rem; padding-top: 1rem;">100.000vnd</h1>
+                            </div>
+                        </div>
+                    </div>  
+                </div>       
+            </div>
+        </div>
+        <!--footer-->
+        <div class="footer">
+            <div class="container">
+                <div class="row g-0">
+                    <div class="col-3 footer-item">
+                        <div class="footer-item__title">Gioi thieu</div>
+                        <ui class="footer-item__list">
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Trang
+                                    chu</a></li>
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Về cửa hàng</a></li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Sản phẩm</a></li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Lộ trình</a>
+                            </li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Blogs</a>
+                            </li>
+                        </ui>
+                    </div>
+
+                    <div class="col-3 footer-item">
+                        <div class="footer-item__title">Chinh sach</div>
+                        <ui class="footer-item__list">
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Chính sách bán hàng</a></li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Chính sách giao hàng</a></li>
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Chính sách đổi trả</a></li>
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Ràng buộc hợp đồng</a></li>
+                        </ui>
+                    </div>
+
+                    <div class="col-3 footer-item">
+                        <div class="footer-item__title">Huong Dan</div>
+                        <ui class="footer-item__list">
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Hướng dẫn mua hàng</a></li>
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Hướng dẫn thanh toán</a></li>
+                            <li class="footer-item__list--item"><a href="#" class="footer-item__list--item-link">Hướng dẫn nhận hàng</a></li>
+                        </ui>
+                    </div>
+
+                    <div class="col-3 footer-item">
+                        <div class="footer-item__title">Ho tro khach hang</div>
+                        <ui class="footer-item__list">
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Tìm kiếm</a>
+                            </li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Đăng nhập</a>
+                            </li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Đăng kí</a></li>
+                            <li class="footer-item__list--item"><a href="#"
+                                    class="footer-item__list--item-link">Giỏ hàng</a>
+                            </li>
+                        </ui>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-6 footer-item">
+                        <div class="footer-item__title">Gioi thieu</div>
+                        <ui class="footer-item__list">
+                            <li class="footer-item__list--item">
+                                <a href="#" class="footer-item__list--item-link">
+                                    <span>Dia chi: </span>
+                                    C11-01, so 473 Man Thien, Thu Duc, KDT Geleximco Le Trong Tan, Phuong Duong Noi,
+                                    Quan Ha
+                                    Dong, Ha Noi
+                                </a>
+                            </li>
+                            <li class="footer-item__list--item">
+                                <a href="mailto:group7se@gmail.com" class="footer-item__list--item-link">
+                                    <span>Email: </span>
+                                    group7se@gmail.com
+                                </a>
+                            </li>
+                            <li class="footer-item__list--item">
+                                <a href="tel:0979500611" class="footer-item__list--item-link">
+                                    <span>Hotline: </span>
+                                    0979500611
+                                </a>
+                            </li>
+                        </ui>
+                    </div>
+                    <div class="col-3 footer-item">
+                        <div class="footer-item__title">Liên hệ với chúng tôi</div>
+                        <ui class="footer-item__list">
+                            <li class="contact-item__list-icon--contact">
+                                <img src="/images/facebook.png" alt="facebook-store">
+                            </li>
+                            <li class="contact-item__list-icon--contact">
+                                <img src="/images/twiter.png" alt="" srcset="">
+                            </li>
+                        </ui>
+                    </div>
+                    <div class="col-3 footer-item">
+                        <div class="footer-item--location">
+                            <img src="/images/home-icon.png" alt="home-icon">
+                            <button type="button" class="btn btn-warning btn-lg watch-more--button">Địa chỉ cửa hàng</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-12 copy-right">@group7se</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- background -->
+    <!-- <div class="background">
+        <div class="container">
+            <div class="v10_531"></div>
+            <div class="v10_532"></div>
+            <div class="v10_533"></div>
+            <div class="v10_534"></div>
+        </div>
+    </div> -->
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slick carousel -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- main js -->
+    <script type="text/javascript" src="assest/app.js"></script>
+</body>
+
+</html>
