@@ -45,10 +45,6 @@
               "target": "Package",
               "version": "[1.0.0, )"
             },
-            "FirebaseDatabase.net": {
-              "target": "Package",
-              "version": "[4.2.0, )"
-            },
             "FirebaseStorage.net": {
               "target": "Package",
               "version": "[1.0.3, )"

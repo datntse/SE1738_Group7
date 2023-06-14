@@ -1,9 +1,9 @@
 {
   "ExpandedNodes": [
-    "",
     "\\src",
-    "\\src\\back-end"
+    "\\src\\back-end",
+    "\\src\\back-end\\BMOS",
+    "\\src\\back-end\\BMOS\\Controllers"
   ],
-  "SelectedNode": "\\src\\back-end\\BMOS.sln",
   "PreviewInSolutionExplorer": false
 }

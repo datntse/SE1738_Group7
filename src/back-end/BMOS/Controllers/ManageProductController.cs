@@ -10,6 +10,8 @@ using Firebase.Auth;
 using System.Text;
 using Firebase.Storage;
 using System.Net;
+using Microsoft.VisualBasic;
+using System.IO;
 
 namespace BMOS.Controllers
 {
@@ -57,47 +59,111 @@ namespace BMOS.Controllers
 
 
         private static string ApiKey = "AIzaSyBLDYkXtfdYnKseDJbz6J72lousbPIrniE";
-        private static string Bucket = "bmosfile.appspot.com/product";
-        private static string AuthEmail = "staff@email.com";
+        private static string Bucket = "bmosfile.appspot.com";
+        private static string AuthEmail = "staff01@gmail.com";
         private static string AuthPassword = "123456";
 
         // POST: ManageProduct/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to.
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
-        //[HttpPost]
-        //[ValidateAntiForgeryToken]
-        //public async Task<IActionResult> Create([Bind("ProductId,Name,Quantity,Description,Weight,IsAvailable,IsLoved,Status")] TblProduct tblProduct, IFormFile file)
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        //public async Task<IActionResult> Create([Bind("ProductId,Name,Quantity,Description,Weight,IsAvailable,IsLoved,Status")] TblProduct tblProduct, List<IFormFile> files)
         //{
-        //    string webRootPath = _webHostEnvironment.WebRootPath;
+        //    string webroot = _webHostEnvironment.WebRootPath;
 
-        //    FileStream stream;
-
+        //    var size = files.Sum(f => f.Length);
+        //    var filePaths = new List<String>();
+        //    FileStream stream = null;
+        //    string filefolder = "firebaseFiles";
         //    if (ModelState.IsValid)
         //    {
-        //        if (file.Length > 0)
+        //        foreach (var file in files)
         //        {
-        //            string path = Path.Combine(webRootPath, "~", file.FileName);
-        //            stream = new FileStream(Path.Combine(path), FileMode.Open);
-        //            await Task.Run(() => Upload(stream, file.FileName));
+        //            if (file.Length > 0)
+        //            {
+        //                //upload the file to the firebase 
+        //                string path = Path.Combine(webroot, $"images/{filefolder}");
+        //                if (Directory.Exists(path))
+        //                {
+        //                    using (stream = new FileStream(Path.Combine(path), FileMode.Create))
+        //                    {
+        //                        await file.CopyToAsync(stream);
+        //                    }
+        //                    stream = new FileStream(Path.Combine(path, file.FileName), FileMode.Open);
+        //                    await Task.Run(() => Upload(stream, file.FileName));
+        //                }
+        //                _context.Add(tblProduct);
+        //                await _context.SaveChangesAsync();
+        //                return RedirectToAction(nameof(Index));
+        //            }
+
         //        }
-        //        _context.Add(tblProduct);
-        //        await _context.SaveChangesAsync();
-        //        return RedirectToAction(nameof(Index));
         //    }
         //    return View(tblProduct);
         //}
-
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("ProductId,Name,Quantity,Description,Weight,IsAvailable,IsLoved,Status")] TblProduct tblProduct)
+        public async Task<IActionResult> Create([Bind("ProductId,Name,Quantity,Description,Weight,IsAvailable,IsLoved,Status")] TblProduct tblProduct, List<IFormFile> files)
         {
-            if (ModelState.IsValid)
+            string root = _webHostEnvironment.WebRootPath;
+            var filePaths = new List<String>();
+            FileStream stream = null;
+            string filefolder = "firebaseFiles";
+            foreach (var file in files)
             {
-                _context.Add(tblProduct);
-                await _context.SaveChangesAsync();
-                return RedirectToAction(nameof(Index));
+                if (file.Length > 0)
+                {
+                    //upload the file to the firebase 
+                    string path = Path.Combine(root, $"images/{filefolder}");
+                    if (Directory.Exists(path))
+                    {
+                        using (stream = new FileStream(Path.Combine(path), FileMode.Create))
+                        {
+                            await file.CopyToAsync(stream);
+                        }
+                        stream = new FileStream(Path.Combine(path, file.FileName), FileMode.Open);
+                    }
+                    else
+                    {
+                        Directory.CreateDirectory(path);
+                    }
+                    var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
+                    var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPassword);
+
+                    //you can use CancellationTokenSource to cancel the upload midway
+                    var cancellation = new CancellationTokenSource();
+
+                    var task = new FirebaseStorage(
+                        Bucket,
+                        new FirebaseStorageOptions
+                        {
+                            AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
+                            ThrowOnCancel = true // when you cancel the upload, exception is thrown. By default no exception is thrown
+                        })
+                        .Child("products")
+                        .Child($"{file.FileName}.{Path.GetExtension(file.FileName).Substring(1)}")
+                        .PutAsync(stream, cancellation.Token);
+
+                    //cancel the uploadl
+                    cancellation.Cancel();
+                    try
+                    {
+                        //error during upload will be thrown when you await the task
+                        Console.WriteLine("Download link:\n" + await task);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine("Exception was thrown: {0}", ex);
+                    }
+                }
+                
+                if (ModelState.IsValid)
+                {
+                    _context.Add(tblProduct);
+                    await _context.SaveChangesAsync();
+                    return RedirectToAction(nameof(Index));
+                }
             }
-            return View(tblProduct);
+                return View(tblProduct);
         }
 
         private static async Task Upload(FileStream stream, String fileName)
@@ -106,7 +172,7 @@ namespace BMOS.Controllers
             var auth = new FirebaseAuthProvider(new FirebaseConfig(ApiKey));
             var a = await auth.SignInWithEmailAndPasswordAsync(AuthEmail, AuthPassword);
 
-            // you can use CancellationTokenSource to cancel the upload midway
+            //you can use CancellationTokenSource to cancel the upload midway
             var cancellation = new CancellationTokenSource();
 
             var task = new FirebaseStorage(
@@ -116,18 +182,16 @@ namespace BMOS.Controllers
                     AuthTokenAsyncFactory = () => Task.FromResult(a.FirebaseToken),
                     ThrowOnCancel = true // when you cancel the upload, exception is thrown. By default no exception is thrown
                 })
-                .Child("product")
-                .Child(fileName)
-                .Child("someFile.png")
+                .Child("products")
+                .Child($"{fileName}")
                 .PutAsync(stream, cancellation.Token);
 
-            task.Progress.ProgressChanged += (s, e) => Console.WriteLine($"Progress: {e.Percentage} %");
 
-            // cancel the upload
-            // cancellation.Cancel();
+            //cancel the uploadl
+            cancellation.Cancel();
             try
             {
-                // error during upload will be thrown when you await the task
+                //error during upload will be thrown when you await the task
                 Console.WriteLine("Download link:\n" + await task);
             }
             catch (Exception ex)
