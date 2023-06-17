@@ -9,61 +9,61 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = BMOS
 build_property.RootNamespace = BMOS
-build_property.ProjectDir = C:\Users\datnt\Source\Repos\SE1738_Group7\src\back-end\BMOS\
+build_property.ProjectDir = D:\SWP\src\back-end\BMOS\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\datnt\Source\Repos\SE1738_Group7\src\back-end\BMOS
+build_property.MSBuildProjectDirectory = D:\SWP\src\back-end\BMOS
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/Home/Index.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/Home/Privacy.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/ManageProduct/Create.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/ManageProduct/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUHJvZHVjdFxDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/ManageProduct/Delete.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/ManageProduct/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUHJvZHVjdFxEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/ManageProduct/Details.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/ManageProduct/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUHJvZHVjdFxEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/ManageProduct/Edit.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/ManageProduct/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUHJvZHVjdFxFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/ManageProduct/Index.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/ManageProduct/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTWFuYWdlUHJvZHVjdFxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/Shared/Error.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/Shared/_ManagePage.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/Shared/_ManagePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9NYW5hZ2VQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/_ViewImports.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/_ViewStart.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/datnt/Source/Repos/SE1738_Group7/src/back-end/BMOS/Views/Shared/_Layout.cshtml]
+[D:/SWP/src/back-end/BMOS/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-m838o2wznr

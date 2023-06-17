@@ -1,8 +1,193 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model IEnumerable<Bmostest.Models.Entities.TblProduct>
+@{
+    Layout = "_Layout";
 }
+<body>
+    <!-- Content -->
+    <div class="content">
+        <div class="container">
+            <div class="banner banner-warpper">
+                <img src="https://cdn.shopify.com/s/files/1/1111/3280/files/HomepageBanner2F_2021_2500x.progressive.jpg?v=1635904976"
+                     alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0521/5784/1585/collections/the_pet_shop_banner_1378_x_288.jpg?v=1653636527"
+                     alt="">
+                <img src="https://cdn.shopify.com/s/files/1/0521/5784/1585/files/coming_soon.jpg?v=1629961464"
+                     alt="">
+            </div>
+            <div class="product-container">
+                <div class="row product-list">
+                    <div class="col-12 product-list__title">Thức ăn cho chim</div>
+                    <div class="row product-row g-0">
+                        <div class="col-4 product-img-banner">
+                            <img src="/images/product.png" alt="Product Imgage" srcset="">
+                        </div>
+                        <div class="row col-8">
+                            <div class="product-warpper">
+                                <!-- <div class="routing-warpper"> -->
+                                @foreach (var item in Model)
+                                {
+                                    <a class="product-item" asp-action="ChiTiet" asp-route-id="@item.ProductId" style="text-decoration: none">
+                                        <div class="product-content product-border">
+                                            <div class="product-img-item" style="background-image: url(@Html.DisplayFor(modelItem => item.ImagelInk));"> </div>
+                                            <div class="product-desc">
+                                                <div class="product-desc__title">@Html.DisplayFor(modelItem => item.Name)</div>
+                                                <div class="product-desc__price">@Html.DisplayFor(modelItem => item.Price)</div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+
+                            </div>
+                            <div class="col-12 watch-more__button">
+                                <button type="button" class="btn btn-warning btn-lg watch-more--button">Xem thêm</button>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row product-list">
+                    <div class="col-12 product-list__title">Lộ trình cho chim</div>
+                    <div class="row routing-row g-0">
+                        <div class="col-4 routing-img-banner">
+                            <img src="/images/routing.png" alt="routing Imgage" srcset="">
+                        </div>
+                        <div class="row col-8">
+                            <div class="product-warpper">
+                                <!-- <div class="routing-warpper"> -->
+                                <div class="routing-item">
+                                    <div class="routing-content product-border">
+                                        <div class="routing-img-item"></div>
+                                        <div class="routing-desc">
+                                            <div class="routing-desc__title">Bữa ăn cho chim</div>
+                                            <div class="routing-desc__price">100.000vnd</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="routing-item">
+                                    <div class="routing-content product-border">
+                                        <div class="routing-img-item"></div>
+                                        <div class="routing-desc">
+                                            <div class="routing-desc__title">Bữa ăn cho chim</div>
+                                            <div class="routing-desc__price">100.000vnd</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="routing-item">
+                                    <div class="routing-content product-border">
+                                        <div class="routing-img-item"></div>
+                                        <div class="routing-desc">
+                                            <div class="routing-desc__title">Bữa ăn cho chim</div>
+                                            <div class="routing-desc__price">100.000vnd</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="routing-item">
+                                    <div class="routing-content product-border">
+                                        <div class="routing-img-item"></div>
+                                        <div class="routing-desc">
+                                            <div class="routing-desc__title">Bữa ăn cho chim</div>
+                                            <div class="routing-desc__price">100.000vnd</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="routing-item">
+                                    <div class="routing-content product-border">
+                                        <div class="routing-img-item"></div>
+                                        <div class="routing-desc">
+                                            <div class="routing-desc__title">Bữa ăn cho chim</div>
+                                            <div class="routing-desc__price">100.000vnd</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-12 watch-more__button">
+                                <button type="button" class="btn btn-lg watch-more--button">Xem thêm</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Blog warper -->
+            <div class="blog-container">
+                <div class="row blog-list">
+                    <div class="col-12 product-list__title">Danh sách Blog</div>
+                    <div class="row g-0">
+                        <div class="blog-warpper">
+                            <div class="blog-item">
+                                <div class="blog-content">
+                                    <div class="blog-img">
+                                        <img src="images/chim_canh_cut_hoang_de.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="blog-desc">
+                                        Đài BBC ngày 11-11 cho biết chú chim cánh cụt Adélie kể trên được cư dân địa phương đặt tên là Pingu. Nó được tìm thấy ở bãi biển New Zealand, cách môi trường sống tự nhiên ở Nam Cực ít nhất 3.000 km.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-content">
+                                    <div class="blog-img">
+                                        <img src="images/chimcanhcut.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="blog-desc">
+                                        Đài BBC ngày 11-11 cho biết chú chim cánh cụt Adélie kể trên được cư dân địa phương đặt tên là Pingu. Nó được tìm thấy ở bãi biển New Zealand, cách môi trường sống tự nhiên ở Nam Cực ít nhất 3.000 km.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-content">
+                                    <div class="blog-img">
+                                        <img src="images/chimcanhcut2.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="blog-desc">
+                                        Đài BBC ngày 11-11 cho biết chú chim cánh cụt Adélie kể trên được cư dân địa phương đặt tên là Pingu. Nó được tìm thấy ở bãi biển New Zealand, cách môi trường sống tự nhiên ở Nam Cực ít nhất 3.000 km.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-content">
+                                    <div class="blog-img">
+                                        <img src="images/chim_canh_cut_hoang_de.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="blog-desc">
+                                        Đài BBC ngày 11-11 cho biết chú chim cánh cụt Adélie kể trên được cư dân địa phương đặt tên là Pingu. Nó được tìm thấy ở bãi biển New Zealand, cách môi trường sống tự nhiên ở Nam Cực ít nhất 3.000 km.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="blog-item">
+                                <div class="blog-content">
+                                    <div class="blog-img">
+                                        <img src="images/chimcanhcut.jpg"
+                                             alt="">
+                                    </div>
+                                    <div class="blog-desc">
+                                        Đài BBC ngày 11-11 cho biết chú chim cánh cụt Adélie kể trên được cư dân địa phương đặt tên là Pingu. Nó được tìm thấy ở bãi biển New Zealand, cách môi trường sống tự nhiên ở Nam Cực ít nhất 3.000 km.
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+            integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+            crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <!-- slick carousel -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <!-- main js -->
+    <script type="text/javascript" src="~/js/app.js"></script>
+</body>
+

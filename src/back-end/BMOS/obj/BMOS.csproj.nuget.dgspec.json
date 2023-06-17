@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj": {}
+    "D:\\SWP\\src\\back-end\\BMOS\\BMOS.csproj": {}
   },
   "projects": {
-    "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj": {
+    "D:\\SWP\\src\\back-end\\BMOS\\BMOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
+        "projectUniqueName": "D:\\SWP\\src\\back-end\\BMOS\\BMOS.csproj",
         "projectName": "BMOS",
-        "projectPath": "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
-        "packagesPath": "C:\\Users\\datnt\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\datnt\\Source\\Repos\\SE1738_Group7\\src\\back-end\\BMOS\\obj\\",
+        "projectPath": "D:\\SWP\\src\\back-end\\BMOS\\BMOS.csproj",
+        "packagesPath": "C:\\Users\\lechi\\.nuget\\packages\\",
+        "outputPath": "D:\\SWP\\src\\back-end\\BMOS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\datnt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\lechi\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
