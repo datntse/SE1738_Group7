@@ -1,15 +1,14 @@
 {
   "ExpandedNodes": [
-<<<<<<< HEAD
-    ""
-  ],
-  "SelectedNode": "\\BMOS.sln",
-=======
+    "",
+    "\\document",
     "\\src",
     "\\src\\back-end",
     "\\src\\back-end\\BMOS",
-    "\\src\\back-end\\BMOS\\Controllers"
+    "\\src\\back-end\\BMOS\\Controllers",
+    "\\src\\back-end\\BMOS\\wwwroot",
+    "\\src\\back-end\\BMOS\\wwwroot\\css",
+    "\\src\\database"
   ],
->>>>>>> f074a74a8e04c9fb5b9ac816943500730dbacd46
   "PreviewInSolutionExplorer": false
 }

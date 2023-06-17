@@ -24,6 +24,10 @@
     <Folder Include="Areas\Admin\Data\" />
     <Folder Include="Areas\Admin\Models\" />
     <Folder Include="Areas\Admin\Views\" />
+    <Folder Include="Areas\Customer\Controllers\" />
+    <Folder Include="Areas\Customer\Data\" />
+    <Folder Include="Areas\Customer\Models\" />
+    <Folder Include="Areas\Customer\Views\" />
     <Folder Include="Areas\Staff\Controllers\" />
     <Folder Include="Areas\Staff\Data\" />
     <Folder Include="Areas\Staff\Models\" />
