@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\MAJOR\\MAJOR5\\SWP391\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj": {}
+    "D:\\Ewithme\\LMS\\SWP391\\Project\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj": {}
   },
   "projects": {
-    "D:\\MAJOR\\MAJOR5\\SWP391\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj": {
+    "D:\\Ewithme\\LMS\\SWP391\\Project\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\MAJOR\\MAJOR5\\SWP391\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
+        "projectUniqueName": "D:\\Ewithme\\LMS\\SWP391\\Project\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
         "projectName": "BMOS",
-        "projectPath": "D:\\MAJOR\\MAJOR5\\SWP391\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
-        "packagesPath": "C:\\Users\\datnt\\.nuget\\packages\\",
-        "outputPath": "D:\\MAJOR\\MAJOR5\\SWP391\\SE1738_Group7\\src\\back-end\\BMOS\\obj\\",
+        "projectPath": "D:\\Ewithme\\LMS\\SWP391\\Project\\SE1738_Group7\\src\\back-end\\BMOS\\BMOS.csproj",
+        "packagesPath": "C:\\Users\\minht\\.nuget\\packages\\",
+        "outputPath": "D:\\Ewithme\\LMS\\SWP391\\Project\\SE1738_Group7\\src\\back-end\\BMOS\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\datnt\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\minht\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.302\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -65,7 +64,7 @@
             },
             "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
               "target": "Package",
-              "version": "[6.0.13, )"
+              "version": "[6.0.14, )"
             }
           },
           "imports": [
@@ -87,7 +86,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.203\\RuntimeIdentifierGraph.json"
         }
       }
     }
