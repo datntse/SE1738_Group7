@@ -21,6 +21,10 @@ public partial class TblProduct
 
     public bool? Status { get; set; }
 
+    public double? Price { get; set; }
+
+    public string? ImagelInk { get; set; }
+
     public virtual ICollection<TblFavouriteList> TblFavouriteLists { get; set; } = new List<TblFavouriteList>();
 
     public virtual ICollection<TblFeedback> TblFeedbacks { get; set; } = new List<TblFeedback>();
